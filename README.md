@@ -26,3 +26,12 @@ Or with `psql` from host:
 psql postgres://myapp_user:password@localhost:15432/myapp_db
 ```
 
+The database files are persisted on the host and mapped to the container in the `docker-compose.yml` 
+with:
+```
+volumes:
+  - "/tmp/pgdata:/var/lib/postgresql/data"
+
+```
+
+
