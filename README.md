@@ -8,10 +8,12 @@
 A React app, initialized with [create-react-app]
 
 ## Install
-Requires system installations of [docker], [docker-compose], and Node. 
-Install the node packages with: 
+Requires system installations of [docker], [docker-compose], and Node.  
+Install the node packages in the SERVER and CLIENT: 
 ```
 npm install
+cd client && npm install
+cd ..
 ```
 
 ## Run
