@@ -6,10 +6,14 @@
   "dependencies": {
     "express": "^4.16.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npm run dev",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "server": "docker-compose up",
+    "client": "cd client && npm start"
   },
   "author": "Scott Hill",
   "license": "ISC"

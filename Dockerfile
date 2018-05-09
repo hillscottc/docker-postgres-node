@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package-lock.json /app
 COPY package.json /app
 RUN npm install
-COPY dist /app
-COPY wait-for-it.sh /app
-CMD node server.js
+#Copy the build folder files
+#COPY dist /app
+CMD node server/index.js
 EXPOSE 3010
