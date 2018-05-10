@@ -59,6 +59,7 @@ I was helped putting this together from stuff I found
 [here](https://medium.com/@beld_pro/quick-tip-creating-a-postgresql-container-with-default-user-and-password-8bb2adb82342), 
 [here](https://medium.freecodecamp.org/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0), 
 [here](http://tleyden.github.io/blog/2017/06/14/running-postgresql-in-docker/), 
+[here](https://github.com/vmasto/express-babel), 
 and [here](https://stackoverflow.com/questions/48751074/setting-up-docker-with-knex-js-and-postgresql).
 
 

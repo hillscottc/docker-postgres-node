@@ -1,12 +1,21 @@
 {
   "name": "docker-postgres-node",
   "version": "1.0.0",
+  "author": "Scott Hill",
+  "license": "ISC",
   "description": "docker-ized postgres node fullstack",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.3"
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "babel-register": "^6.26.0",
     "concurrently": "^3.5.1"
   },
   "scripts": {
@@ -15,6 +24,20 @@
     "server": "docker-compose up",
     "client": "cd client && npm start"
   },
-  "author": "Scott Hill",
-  "license": "ISC"
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
+  }
 }
