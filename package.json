@@ -15,14 +15,18 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-register": "^6.26.0",
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "eslint": "^4.19.1",
+    "standard": "^11.0.1"
   },
   "scripts": {
     "start": "npm run dev",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "server": "docker-compose up",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "lint": "standard \"client/src/**/*.js\" \"server/**/*.js\""
   },
   "babel": {
     "presets": [
@@ -39,5 +43,8 @@
       "transform-object-rest-spread",
       "transform-class-properties"
     ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
